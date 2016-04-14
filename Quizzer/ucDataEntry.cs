@@ -28,5 +28,12 @@ namespace Quizzer
             frmDataEntry frm = new frmDataEntry();
             frm.ShowDialog();
         }
+
+        private void bEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int QID = Convert.ToInt32(grv.GetFocusedRowCellValue(colID));
+            frmDataEntry frm = new frmDataEntry(QID);
+            frm.ShowDialog();
+        }
     }
 }

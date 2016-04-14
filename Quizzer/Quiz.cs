@@ -52,6 +52,32 @@ namespace Quizzer
             return gd;
         }
 
+        public getData updateQuestion(Questions q)
+        {
+            getData gd = new getData();
+            OleDbCommand cmd = new OleDbCommand("UPDATE Questions SET QuestionType=@QTP, Question=@QTN, Option1=@OP1, Option2=@OP2, Option3=@OP3, Option4=@OP4, Answer=@ANS, MaxTime=@MAX, Points=@PTS WHERE ID=" + q.ID, cm);
+            cmd.Parameters.AddWithValue("@QTP", q.QuestionType);
+            cmd.Parameters.AddWithValue("@QTN", q.Question);
+            cmd.Parameters.AddWithValue("@OP1", q.Option1);
+            cmd.Parameters.AddWithValue("@OP2", q.Option2);
+            cmd.Parameters.AddWithValue("@OP3", q.Option3);
+            cmd.Parameters.AddWithValue("@OP4", q.Option4);
+            cmd.Parameters.AddWithValue("@ANS", q.Answer);
+            cmd.Parameters.AddWithValue("@MAX", q.MaxTime);
+            cmd.Parameters.AddWithValue("@PTS", q.Points);
+            try
+            {
+                cm.Open();
+                gd.Count = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                gd.Message = ex.Message;
+            }
+            finally { cm.Close(); }
+            return gd;
+        }
+
         public Questions getQuestion(int QuestionType)
         {
             Questions q = new Questions();
@@ -92,7 +118,7 @@ namespace Quizzer
         public getData getQuestions()
         {
             getData gd = new getData();
-            OleDbCommand cmd = new OleDbCommand("SELECT q.ID, qt.QuestionType, q.Question, q.Option1, q.Option2, q.Option3, q.Option4, q.Answer, q.MaxTime, q.Points FROM QuestionTypes qt INNER JOIN Questions q ON qt.ID = q.QuestionType", cm);
+            OleDbCommand cmd = new OleDbCommand("SELECT q.ID, qt.ID AS QID, qt.QuestionType, q.Question, q.Option1, q.Option2, q.Option3, q.Option4, q.Answer, q.MaxTime, q.Points FROM QuestionTypes qt INNER JOIN Questions q ON qt.ID = q.QuestionType", cm);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -102,6 +128,21 @@ namespace Quizzer
             gd.DT = dt;
             return gd;
         }
+
+        public getData getQuestions(int QID)
+        {
+            getData gd = new getData();
+            OleDbCommand cmd = new OleDbCommand("SELECT q.ID, qt.ID AS QID, qt.QuestionType, q.Question, q.Option1, q.Option2, q.Option3, q.Option4, q.Answer, q.MaxTime, q.Points FROM QuestionTypes qt INNER JOIN Questions q ON qt.ID = q.QuestionType WHERE q.ID = " + QID, cm);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+            gd.Count = dt.Rows.Count;
+            gd.DS = ds;
+            gd.DT = dt;
+            return gd;
+        }
+
 
         public void setQuestionAsAnswered(int QuestionID)
         {

@@ -47,6 +47,7 @@
             this.colANS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPTS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSEC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colQID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grv)).BeginInit();
@@ -83,6 +84,7 @@
             this.bEdit.Id = 2;
             this.bEdit.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bEdit.LargeGlyph")));
             this.bEdit.Name = "bEdit";
+            this.bEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bEdit_ItemClick);
             // 
             // bDelete
             // 
@@ -134,7 +136,8 @@
             this.colOP4,
             this.colANS,
             this.colPTS,
-            this.colSEC});
+            this.colSEC,
+            this.colQID});
             this.grv.GridControl = this.grd;
             this.grv.GroupCount = 1;
             this.grv.Name = "grv";
@@ -174,6 +177,7 @@
             this.colQTN.OptionsColumn.ReadOnly = true;
             this.colQTN.Visible = true;
             this.colQTN.VisibleIndex = 0;
+            this.colQTN.Width = 239;
             // 
             // colOP1
             // 
@@ -185,6 +189,7 @@
             this.colOP1.OptionsColumn.ReadOnly = true;
             this.colOP1.Visible = true;
             this.colOP1.VisibleIndex = 1;
+            this.colOP1.Width = 64;
             // 
             // colOP2
             // 
@@ -196,6 +201,7 @@
             this.colOP2.OptionsColumn.ReadOnly = true;
             this.colOP2.Visible = true;
             this.colOP2.VisibleIndex = 2;
+            this.colOP2.Width = 64;
             // 
             // colOP3
             // 
@@ -207,6 +213,7 @@
             this.colOP3.OptionsColumn.ReadOnly = true;
             this.colOP3.Visible = true;
             this.colOP3.VisibleIndex = 3;
+            this.colOP3.Width = 64;
             // 
             // colOP4
             // 
@@ -218,6 +225,7 @@
             this.colOP4.OptionsColumn.ReadOnly = true;
             this.colOP4.Visible = true;
             this.colOP4.VisibleIndex = 4;
+            this.colOP4.Width = 64;
             // 
             // colANS
             // 
@@ -229,6 +237,7 @@
             this.colANS.OptionsColumn.ReadOnly = true;
             this.colANS.Visible = true;
             this.colANS.VisibleIndex = 5;
+            this.colANS.Width = 64;
             // 
             // colPTS
             // 
@@ -240,6 +249,7 @@
             this.colPTS.OptionsColumn.ReadOnly = true;
             this.colPTS.Visible = true;
             this.colPTS.VisibleIndex = 6;
+            this.colPTS.Width = 64;
             // 
             // colSEC
             // 
@@ -251,6 +261,13 @@
             this.colSEC.OptionsColumn.ReadOnly = true;
             this.colSEC.Visible = true;
             this.colSEC.VisibleIndex = 7;
+            this.colSEC.Width = 73;
+            // 
+            // colQID
+            // 
+            this.colQID.Caption = "gridColumn1";
+            this.colQID.FieldName = "QID";
+            this.colQID.Name = "colQID";
             // 
             // ucDataEntry
             // 
@@ -287,5 +304,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colANS;
         private DevExpress.XtraGrid.Columns.GridColumn colPTS;
         private DevExpress.XtraGrid.Columns.GridColumn colSEC;
+        private DevExpress.XtraGrid.Columns.GridColumn colQID;
     }
 }

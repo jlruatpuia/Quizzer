@@ -63,9 +63,49 @@ namespace Quizzer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5050 {
+        internal static System.Drawing.Bitmap False_16x16 {
             get {
-                object obj = ResourceManager.GetObject("5050", resourceCulture);
+                object obj = ResourceManager.GetObject("False_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap False_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("False_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fifty {
+            get {
+                object obj = ResourceManager.GetObject("Fifty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap True_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("True_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap True_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("True_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

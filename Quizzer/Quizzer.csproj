@@ -177,6 +177,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\5050.png" />
+    <None Include="Resources\True_32x32.png" />
+    <None Include="Resources\True_16x16.png" />
+    <None Include="Resources\False_32x32.png" />
+    <None Include="Resources\False_16x16.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
