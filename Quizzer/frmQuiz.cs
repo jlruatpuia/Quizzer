@@ -7,11 +7,42 @@ namespace Quizzer
     public partial class frmQuiz : XtraForm
     {
 
+        Quiz Q = new Quiz();
+
         int counter;
+        string round;
+        int team, qType, noOfQ, time;
+        //bool fifty50 = false;
+
 
         public frmQuiz()
         {
             InitializeComponent();
+        }
+
+
+        void LoadQuestion()
+        {
+            Questions q = new Questions();
+            q = Q.getQuestion(qType);
+            lblQSTN.Text = q.Question;
+            bOptA.Text = "A." + q.Option1;
+            bOptB.Text = "B." + q.Option2;
+            bOptC.Text = "C." + q.Option3;
+            bOptD.Text = "D." + q.Option4;
+        }
+        public frmQuiz(string Round, int Team, int QType, int NoOfQ, int Time)
+        {
+            InitializeComponent();
+            round = Round;
+            team = Team;
+            qType = QType;
+            noOfQ = NoOfQ;
+            time = Time;
+
+            lblRound.Text = round;
+            
+            //LoadQuestion();
         }
 
         Quiz q = new Quiz();
@@ -28,22 +59,23 @@ namespace Quizzer
             digitalGauge1.Text = counter.ToString();
         }
 
-        private void btnTimer_Click(object sender, EventArgs e)
+        private void StartTimer()
         {
-            counter = 10;
+            counter = time;
             tmr.Start();
             digitalGauge1.Text = counter.ToString();
         }
 
         private void mBGColor_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //BackColor = bToggle.Checked == true ? Color.Green : Color.FromArgb(235, 236, 239);
-            XtraMessageBox.Show("BG Color");
+            
+            //XtraMessageBox.Show("BG Color");
         }
 
         private void mStart_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            LoadQuestion();
+            StartTimer();
         }
 
         private void mStop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -108,6 +140,19 @@ namespace Quizzer
 
         }
 
+        private void btn5050_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btn5050.Checked)
+            {
+
+            }
+        }
+
+        private void mBgColor_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BackColor = mBgColor.Checked == true ? Color.Green : Color.FromArgb(235, 236, 239);
+        }
+
         private void mFullScreen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -125,6 +170,11 @@ namespace Quizzer
                 bOptC.Image = Properties.Resources.True_16x16;
             else
                 bOptD.Image = Properties.Resources.True_16x16;
+        }
+
+        private void bOptA_CheckedChanged(object sender, EventArgs e)
+        {
+            //bOptA.Checked = bOptA.Checked == true ? false : true;
         }
 
         //private void simpleButton1_Click(object sender, EventArgs e)

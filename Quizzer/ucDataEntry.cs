@@ -35,5 +35,18 @@ namespace Quizzer
             frmDataEntry frm = new frmDataEntry(QID);
             frm.ShowDialog();
         }
+
+        private void bDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int QID = Convert.ToInt32(grv.GetFocusedRowCellValue(colID));
+            if(XtraMessageBox.Show("Do you really want to delete this question?", "Confirm delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                getData gd = new getData();
+                Quiz q = new Quiz();
+                gd = q.deleteQuestion(QID);
+
+                //if(gd.Message == "")
+            }
+        }
     }
 }

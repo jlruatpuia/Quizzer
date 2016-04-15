@@ -93,6 +93,7 @@
             this.bDelete.Id = 3;
             this.bDelete.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bDelete.LargeGlyph")));
             this.bDelete.Name = "bDelete";
+            this.bDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bDelete_ItemClick);
             // 
             // ribbonDataEntry
             // 

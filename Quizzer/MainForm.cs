@@ -46,8 +46,31 @@ namespace Quizzer
 
         private void bStart_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmQuiz frm = new frmQuiz();
-            frm.ShowDialog();
+            string Round;
+            int Team, QType, NoOfQ, Time;
+            frmStart frm = new frmStart();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                Round = frm.Round;
+                Team = frm.Team;
+                QType = frm.QuestionType;
+                NoOfQ = frm.NoOfQuestion;
+                Time = frm.Time;
+                frmQuiz form = new frmQuiz(Round, Team, QType, NoOfQ, Time);
+                form.ShowDialog();
+            }
+
+            
+
+        }
+
+        private void nbiTeams_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ucTeams uc = new ucTeams();
+            LoadControl(uc);
+            ribbonControl.MergeRibbon(uc.ribbonControl1);
+            homeRibbonPage.MergeOrder = 1;
+            ribbonControl.SelectedPage = ribbonControl.MergedRibbon.SelectedPage;
         }
     }
 }

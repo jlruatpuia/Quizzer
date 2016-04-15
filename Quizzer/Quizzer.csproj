@@ -114,6 +114,12 @@
     <Compile Include="frmQuiz.Designer.cs">
       <DependentUpon>frmQuiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,11 +135,20 @@
     <Compile Include="ucDataEntry.Designer.cs">
       <DependentUpon>ucDataEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucTeams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTeams.Designer.cs">
+      <DependentUpon>ucTeams.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDataEntry.resx">
       <DependentUpon>frmDataEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuiz.resx">
       <DependentUpon>frmQuiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -151,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="ucDataEntry.resx">
       <DependentUpon>ucDataEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTeams.resx">
+      <DependentUpon>ucTeams.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

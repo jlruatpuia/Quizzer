@@ -78,6 +78,23 @@ namespace Quizzer
             return gd;
         }
 
+        public getData deleteQuestion(int QID)
+        {
+            getData gd = new getData();
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM Questions WHERE ID=" + QID, cm);
+            try
+            {
+                cm.Open();
+                gd.Count = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                gd.Message = ex.Message;
+            }
+            finally { cm.Close(); }
+            return gd;
+        }
+
         public Questions getQuestion(int QuestionType)
         {
             Questions q = new Questions();
@@ -143,7 +160,6 @@ namespace Quizzer
             return gd;
         }
 
-
         public void setQuestionAsAnswered(int QuestionID)
         {
             OleDbCommand cmd = new OleDbCommand("UPDATE Questions SET Asked=True WHERE ID=" + QuestionID, cm);
@@ -155,6 +171,34 @@ namespace Quizzer
             catch {;
             }
             finally { cm.Close(); }
+        }
+
+        public getData getAllTeams()
+        {
+            getData gd = new getData();
+            OleDbCommand cmd = new OleDbCommand("SELECT ID, TeamName, Status FROM Teams", cm);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+            gd.Count = dt.Rows.Count;
+            gd.DS = ds;
+            gd.DT = dt;
+            return gd;
+        }
+
+        public getData getTeams(string Status)
+        {
+            getData gd = new getData();
+            OleDbCommand cmd = new OleDbCommand("SELECT ID, TeamName, Status FROM Teams WHERE Status='" + Status + "'", cm);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+            gd.Count = dt.Rows.Count;
+            gd.DS = ds;
+            gd.DT = dt;
+            return gd;
         }
 
         public void playAudio(string url)
@@ -203,6 +247,14 @@ namespace Quizzer
         public int QuestionID { get; set; }
         public string Answer { get; set; }
         public bool Correct { get; set; }
+
+    }
+
+    class Teams
+    {
+        public int ID { get; set; }
+        public string TeamName { get; set; }
+        public string Address { get; set; }
 
     }
 }

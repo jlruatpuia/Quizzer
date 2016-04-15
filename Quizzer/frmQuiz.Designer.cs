@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn5050 = new DevExpress.XtraEditors.CheckButton();
+            this.lblTeam = new DevExpress.XtraEditors.LabelControl();
+            this.lblRound = new DevExpress.XtraEditors.LabelControl();
             this.bOptD = new DevExpress.XtraEditors.CheckButton();
             this.bOptC = new DevExpress.XtraEditors.CheckButton();
             this.bOptB = new DevExpress.XtraEditors.CheckButton();
@@ -38,10 +41,7 @@
             this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
             this.digitalGauge1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge();
             this.digitalBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -49,6 +49,11 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.bm = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -65,22 +70,19 @@
             this.mTrue = new DevExpress.XtraBars.BarButtonItem();
             this.mFalse = new DevExpress.XtraBars.BarButtonItem();
             this.m5050 = new DevExpress.XtraBars.BarButtonItem();
+            this.mCheck = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.mFullScreen = new DevExpress.XtraBars.BarButtonItem();
-            this.mBGColor = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.mCheck = new DevExpress.XtraBars.BarButtonItem();
+            this.mBgColor = new DevExpress.XtraBars.BarCheckItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -88,29 +90,75 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn5050);
+            this.layoutControl1.Controls.Add(this.lblTeam);
+            this.layoutControl1.Controls.Add(this.lblRound);
             this.layoutControl1.Controls.Add(this.bOptD);
             this.layoutControl1.Controls.Add(this.bOptC);
             this.layoutControl1.Controls.Add(this.bOptB);
             this.layoutControl1.Controls.Add(this.bOptA);
             this.layoutControl1.Controls.Add(this.lblQSTN);
             this.layoutControl1.Controls.Add(this.gaugeControl1);
-            this.layoutControl1.Controls.Add(this.pictureEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(556, 287, 250, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(865, 240, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(810, 463);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btn5050
+            // 
+            this.btn5050.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
+            this.btn5050.Appearance.Options.UseFont = true;
+            this.btn5050.Location = new System.Drawing.Point(701, 12);
+            this.btn5050.Name = "btn5050";
+            this.btn5050.Size = new System.Drawing.Size(97, 72);
+            this.btn5050.StyleController = this.layoutControl1;
+            this.btn5050.TabIndex = 13;
+            this.btn5050.Text = "50/50";
+            this.btn5050.CheckedChanged += new System.EventHandler(this.btn5050_CheckedChanged);
+            // 
+            // lblTeam
+            // 
+            this.lblTeam.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeam.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTeam.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTeam.Location = new System.Drawing.Point(116, 41);
+            this.lblTeam.Name = "lblTeam";
+            this.lblTeam.Size = new System.Drawing.Size(581, 33);
+            this.lblTeam.StyleController = this.layoutControl1;
+            this.lblTeam.TabIndex = 12;
+            this.lblTeam.Text = "labelControl1";
+            // 
+            // lblRound
+            // 
+            this.lblRound.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRound.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblRound.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblRound.Location = new System.Drawing.Point(116, 12);
+            this.lblRound.Name = "lblRound";
+            this.lblRound.Size = new System.Drawing.Size(581, 25);
+            this.lblRound.StyleController = this.layoutControl1;
+            this.lblRound.TabIndex = 11;
+            this.lblRound.Text = "labelControl1";
+            // 
             // bOptD
             // 
+            this.bOptD.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bOptD.Appearance.FontSizeDelta = 1;
+            this.bOptD.Appearance.Options.UseFont = true;
             this.bOptD.Location = new System.Drawing.Point(407, 411);
             this.bOptD.MinimumSize = new System.Drawing.Size(230, 40);
             this.bOptD.Name = "bOptD";
@@ -121,6 +169,9 @@
             // 
             // bOptC
             // 
+            this.bOptC.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bOptC.Appearance.FontSizeDelta = 1;
+            this.bOptC.Appearance.Options.UseFont = true;
             this.bOptC.Location = new System.Drawing.Point(12, 411);
             this.bOptC.MinimumSize = new System.Drawing.Size(230, 40);
             this.bOptC.Name = "bOptC";
@@ -131,6 +182,9 @@
             // 
             // bOptB
             // 
+            this.bOptB.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bOptB.Appearance.FontSizeDelta = 1;
+            this.bOptB.Appearance.Options.UseFont = true;
             this.bOptB.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.bOptB.Location = new System.Drawing.Point(407, 367);
             this.bOptB.MinimumSize = new System.Drawing.Size(230, 40);
@@ -142,6 +196,9 @@
             // 
             // bOptA
             // 
+            this.bOptA.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bOptA.Appearance.FontSizeDelta = 1;
+            this.bOptA.Appearance.Options.UseFont = true;
             this.bOptA.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.bOptA.Location = new System.Drawing.Point(12, 367);
             this.bOptA.MinimumSize = new System.Drawing.Size(230, 40);
@@ -150,6 +207,7 @@
             this.bOptA.StyleController = this.layoutControl1;
             this.bOptA.TabIndex = 7;
             this.bOptA.Text = "checkButton1";
+            this.bOptA.CheckedChanged += new System.EventHandler(this.bOptA_CheckedChanged);
             // 
             // lblQSTN
             // 
@@ -157,7 +215,7 @@
             this.lblQSTN.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblQSTN.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblQSTN.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.lblQSTN.Location = new System.Drawing.Point(12, 340);
+            this.lblQSTN.Location = new System.Drawing.Point(12, 322);
             this.lblQSTN.Name = "lblQSTN";
             this.lblQSTN.Size = new System.Drawing.Size(786, 23);
             this.lblQSTN.StyleController = this.layoutControl1;
@@ -172,7 +230,7 @@
             this.digitalGauge1});
             this.gaugeControl1.Location = new System.Drawing.Point(12, 12);
             this.gaugeControl1.Name = "gaugeControl1";
-            this.gaugeControl1.Size = new System.Drawing.Size(100, 42);
+            this.gaugeControl1.Size = new System.Drawing.Size(100, 72);
             this.gaugeControl1.TabIndex = 5;
             // 
             // digitalGauge1
@@ -181,7 +239,7 @@
             this.digitalGauge1.AppearanceOn.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Black");
             this.digitalGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent[] {
             this.digitalBackgroundLayerComponent1});
-            this.digitalGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 88, 30);
+            this.digitalGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 88, 60);
             this.digitalGauge1.DigitCount = 2;
             this.digitalGauge1.DisplayMode = DevExpress.XtraGauges.Core.Model.DigitalGaugeDisplayMode.SevenSegment;
             this.digitalGauge1.Name = "digitalGauge1";
@@ -195,62 +253,34 @@
             this.digitalBackgroundLayerComponent1.TopLeft = new DevExpress.XtraGauges.Core.Base.PointF2D(20F, 0F);
             this.digitalBackgroundLayerComponent1.ZOrder = 1000;
             // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = global::Quizzer.Properties.Resources.Fifty;
-            this.pictureEdit1.Location = new System.Drawing.Point(725, 12);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(73, 42);
-            this.pictureEdit1.StyleController = this.layoutControl1;
-            this.pictureEdit1.TabIndex = 4;
-            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.emptySpaceItem1,
             this.emptySpaceItem2,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.emptySpaceItem1,
+            this.emptySpaceItem3,
+            this.layoutControlItem10});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(810, 463);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.pictureEdit1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(713, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(77, 46);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(104, 0);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(609, 46);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 46);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 76);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(790, 282);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(790, 234);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -258,14 +288,14 @@
             this.layoutControlItem2.Control = this.gaugeControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(104, 46);
+            this.layoutControlItem2.Size = new System.Drawing.Size(104, 76);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.lblQSTN;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 328);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 310);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(790, 27);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -307,6 +337,55 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.lblRound;
+            this.layoutControlItem8.Location = new System.Drawing.Point(104, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(585, 29);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.lblTeam;
+            this.layoutControlItem9.Location = new System.Drawing.Point(104, 29);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(585, 37);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(104, 66);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(585, 10);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 337);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 18);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 18);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(790, 18);
+            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.btn5050;
+            this.layoutControlItem10.Location = new System.Drawing.Point(689, 0);
+            this.layoutControlItem10.MaxSize = new System.Drawing.Size(101, 76);
+            this.layoutControlItem10.MinSize = new System.Drawing.Size(101, 76);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(101, 76);
+            this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            // 
             // tmr
             // 
             this.tmr.Interval = 1000;
@@ -337,10 +416,10 @@
             this.m5050,
             this.barSubItem3,
             this.mFullScreen,
-            this.mBGColor,
-            this.mCheck});
+            this.mCheck,
+            this.mBgColor});
             this.bm.MainMenu = this.bar2;
-            this.bm.MaxItemId = 29;
+            this.bm.MaxItemId = 30;
             // 
             // bar2
             // 
@@ -372,6 +451,7 @@
             // 
             this.mStart.Caption = "Start";
             this.mStart.Id = 13;
+            this.mStart.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Space));
             this.mStart.Name = "mStart";
             this.mStart.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mStart_ItemClick);
             // 
@@ -464,30 +544,30 @@
             this.m5050.Name = "m5050";
             this.m5050.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m5050_ItemClick);
             // 
+            // mCheck
+            // 
+            this.mCheck.Caption = "Check";
+            this.mCheck.Id = 28;
+            this.mCheck.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
+            this.mCheck.Name = "mCheck";
+            this.mCheck.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mCheck_ItemClick);
+            // 
             // barSubItem3
             // 
             this.barSubItem3.Caption = "Toggle";
             this.barSubItem3.Id = 25;
             this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.mFullScreen),
-            new DevExpress.XtraBars.LinkPersistInfo(this.mBGColor)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.mBgColor)});
             this.barSubItem3.Name = "barSubItem3";
             // 
             // mFullScreen
             // 
             this.mFullScreen.Caption = "Fullscreen";
             this.mFullScreen.Id = 26;
-            this.mFullScreen.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F12);
+            this.mFullScreen.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T));
             this.mFullScreen.Name = "mFullScreen";
             this.mFullScreen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mFullScreen_ItemClick);
-            // 
-            // mBGColor
-            // 
-            this.mBGColor.Caption = "Background Color";
-            this.mBGColor.Id = 27;
-            this.mBGColor.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F11);
-            this.mBGColor.Name = "mBGColor";
-            this.mBGColor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mBGColor_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -517,13 +597,13 @@
             this.barDockControlRight.Location = new System.Drawing.Point(810, 22);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 463);
             // 
-            // mCheck
+            // mBgColor
             // 
-            this.mCheck.Caption = "Check";
-            this.mCheck.Id = 28;
-            this.mCheck.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
-            this.mCheck.Name = "mCheck";
-            this.mCheck.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mCheck_ItemClick);
+            this.mBgColor.Caption = "Background Color";
+            this.mBgColor.Id = 29;
+            this.mBgColor.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
+            this.mBgColor.Name = "mBgColor";
+            this.mBgColor.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.mBgColor_CheckedChanged);
             // 
             // frmQuiz
             // 
@@ -542,10 +622,7 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -553,6 +630,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -562,9 +644,7 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraGauges.Win.GaugeControl gaugeControl1;
@@ -603,7 +683,14 @@
         private DevExpress.XtraBars.BarButtonItem m5050;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarButtonItem mFullScreen;
-        private DevExpress.XtraBars.BarButtonItem mBGColor;
         private DevExpress.XtraBars.BarButtonItem mCheck;
+        private DevExpress.XtraEditors.LabelControl lblRound;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.LabelControl lblTeam;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.CheckButton btn5050;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraBars.BarCheckItem mBgColor;
     }
 }
